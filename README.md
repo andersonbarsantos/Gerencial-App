@@ -1,2 +1,2 @@
-# Gerencial-App-
+# Gerencial-App
 Projeto Base
