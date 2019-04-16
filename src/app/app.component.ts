@@ -1,18 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-//import { AnalyticsService } from './@core/utils/analytics.service';
+import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+
+import { AuthenticationService } from './auth/authentication.service';
+import { Router } from '@angular/router';
+import { User } from './@shared/models/user.model';
 
 @Component({
   selector: 'gerencial-app',
   template: '<router-outlet></router-outlet>',
+
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
+  title = 'Gerencial SiGCOR';
+  currentUser: User;
 
   constructor(
-    //private analytics: AnalyticsService
-    ) {
+    private translate: TranslateService
+    , private router: Router
+    , private authenticationService: AuthenticationService
+  ) {
+    translate.addLangs(['en', 'br', 'fr']);
+    translate.setDefaultLang('en');
+
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|br|fr/) ? browserLang : 'br');
   }
 
-  ngOnInit(): void {
-   // this.analytics.trackPageViews();
+  logout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
   }
 }
+

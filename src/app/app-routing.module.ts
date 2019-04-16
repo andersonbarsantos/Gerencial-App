@@ -1,20 +1,58 @@
-import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
 
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+      {
+        path: 'dashboard',
+        loadChildren: './pages/dashboard/dashboard.module#DashboardModule',
+        canActivate: [AuthGuard]
+      },
+      // {
+      //   path: 'cliente',
+      //   loadChildren: './pages/cliente/cliente.module#ClienteModule',
+      //   canActivate: [AuthGuard]
+      // },
+      // {
+      //   path: 'funcionario',
+      //   loadChildren: './pages/funcionario/funcionario.module#FuncionarioModule',
+      //   canActivate: [AuthGuard]
+      // },
 
-const routes: Routes = [
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: 'pages', loadChildren: './pages/pages.module#PagesModule' },
-  { path: '**', redirectTo: 'pages' },
+      {
+        path: 'user',
+        loadChildren: './pages/user/user.module#UserModule',
+        canActivate: [AuthGuard]
+      }
+
+    ],
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
 ];
 
 const config: ExtraOptions = {
   useHash: true,
+  enableTracing: false
 };
 
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes, config)],
-  exports: [RouterModule],
+  imports: [RouterModule.forRoot(appRoutes, config)],
+
+  exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }

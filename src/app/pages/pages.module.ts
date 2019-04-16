@@ -1,15 +1,36 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AppMaterialModule } from './../app-material/app-material.module';
+
 import { HomeComponent } from './home/home.component';
-import { PagesRoutingModule } from './pages-routing.module'
-import { DashboardModule } from './dashboard/dashboard.module';
+import { LoginComponent } from './login/login.component';
+
+import { RouterModule } from '@angular/router';
+import { SidebarModule } from '../@shared/components/sidebar/sidebar.module';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [
+    HomeComponent,
+    LoginComponent,     
+
+  ],
   imports: [
-    CommonModule
-    , PagesRoutingModule
-    , DashboardModule
-  ]
+
+  AppMaterialModule
+    , RouterModule
+    , ReactiveFormsModule
+    , CommonModule    
+    , SidebarModule
+
+    
+  ],
+  exports: [
+    HomeComponent,
+    LoginComponent
+
+  ],
+  providers: [],
 })
-export class PagesModule { }
+
+export class PageModule { }
