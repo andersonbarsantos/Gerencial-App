@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { AuthenticationService } from './auth/authentication.service';
 import { Router } from '@angular/router';
-import { User } from './@shared/models/user.model';
+import { User } from './pages/user/shared/user.model';
 
 @Component({
   selector: 'gerencial-app',

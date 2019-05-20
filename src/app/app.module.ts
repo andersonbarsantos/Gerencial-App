@@ -13,9 +13,12 @@ import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './_helper
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AppMaterialModule } from './app-material/app-material.module';
+
 import { PageModule } from './pages/pages.module';
-import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
+import { AppBootstrapModule } from './@shared/app-bootstrap/app-bootstrap.module';
+import { AppMaterialModule } from './@shared/app-material/app-material.module';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -24,12 +27,14 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule
+ 
+  BrowserModule
     , BrowserAnimationsModule
     , HttpClientModule
     , AppRoutingModule
     , AppMaterialModule
     , AppBootstrapModule 
+    , AngularFontAwesomeModule
     , PageModule
     , TranslateModule.forRoot({
       loader: {

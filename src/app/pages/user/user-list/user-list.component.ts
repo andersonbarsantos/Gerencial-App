@@ -1,10 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router } from "@angular/router";
 
-import { UserService } from '../user.service';
+import { UserService } from '../shared/user.service';
 import { TranslateService } from '@ngx-translate/core';
-import { User } from 'src/app/shared/models/user.model';
-
+import { User } from 'src/app/pages/user/shared/user.model';
 
 @Component({
   selector: 'user-list',
@@ -16,26 +15,26 @@ export class UserListComponent implements OnInit {
   users: User[];
 
   constructor(private router: Router
-    , private userService: UserService   
-    ) {
+    , private userService: UserService
+  ) {
 
-     }
+  }
 
   ngOnInit() {
     // if(!window.localStorage.getItem('token')) {
     //   this.router.navigate(['login']);
     //   return;
     // }
-  //   this.userService.getUsers()
-  //     .subscribe(data => {
-  //       this.users = data.result;
-  //     });
+    //   this.userService.getUsers()
+    //     .subscribe(data => {
+    //       this.users = data.result;
+    //     });
 
-  this.listUser() ; 
-   }
+    this.listUser();
+  }
 
-  listUser() : void  {
-    this.users = this.userService.getUsers();     
+  listUser(): void {
+    this.users = this.userService.getUsers();
   }
 
 

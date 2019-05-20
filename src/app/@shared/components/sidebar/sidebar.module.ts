@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SidebarComponent } from './sidebar.component';
-import { SidebarService } from './sidebar.service';
+import { SidebarService } from './shared/sidebar.service';
 
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';

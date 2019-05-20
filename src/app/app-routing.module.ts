@@ -16,11 +16,11 @@ const appRoutes: Routes = [
         loadChildren: './pages/dashboard/dashboard.module#DashboardModule',
         canActivate: [AuthGuard]
       },
-      // {
-      //   path: 'cliente',
-      //   loadChildren: './pages/cliente/cliente.module#ClienteModule',
-      //   canActivate: [AuthGuard]
-      // },
+      {
+        path: 'client',
+        loadChildren: './pages/client/client.module#ClientModule',
+        canActivate: [AuthGuard]
+      },
       // {
       //   path: 'funcionario',
       //   loadChildren: './pages/funcionario/funcionario.module#FuncionarioModule',

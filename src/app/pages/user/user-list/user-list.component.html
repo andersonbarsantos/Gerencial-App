@@ -1,29 +1,104 @@
+<div class="row">
+  <div class="col-md-auto">
+    <fa name="users" fixed="True" size="2x"></fa>
+  </div>
+  <div class="col">
+    <h4 class="mb-4 text-muted">Usuarios </h4>
+  </div>
+</div>
 
 <div class="row">
-<div class="col-md-8">
-  <h2> Lista de usuarios</h2>
+  <div class="col-md-8">
 
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th class="hidden">Id</th>
-      <th>FirstName</th>
-      <th>LastName</th>
-      <th>Email</th>
-      <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let user of users">
-      <td class="hidden">{{user.id}}</td>
-      <td>{{user.nome}}</td>
-      <td>{{user.sobreNome}}</td>
-      <td>{{user.cargo}}</td>
-      <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete</button>
-        <button class="btn btn-danger" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
-    </tr>
-    </tbody>
-  </table>
+    <div class="card">
+      <div class="card-body">
+        <!-- <grid-dados dataValue= [users]  ></grid-dados> -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="hidden">Id</th>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of users">
+              <td class="hidden">{{item.id}}</td>
+              <td>{{item.firstName}}</td>
+              <td>{{item.lastName}}</td>
+              <td>{{item.cargo}}</td>
+              <td>
+
+                <button class="btn btn-danger" (click)="editUser(user)" style="margin-left: 20px;"> Editar</button>
+                <!-- <button class="btn btn-danger" (click)="deleteUser(user)"> Remover</button> -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-4">
+
+    <!-- <div class="card border-success mb-3">
+
+      <div class="card-body text-success">
+        <h5 class="card-title">Resumo</h5>
+        <p class="card-text">{{description}} </p>
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6">
+                <h1 class="mb-4 text-muted">25 </h1>
+              </div>
+              <div class="col-md-6">
+                <span> <i class="fa fa-bell"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <p>Exibir Inativos </p>
+          </div>
+        </div>
+      </div>
+
+    </div> -->
+
+    <div class="card text-white bg-success mb-4">
+      <div class="card-header">Resumo</div>
+      <div class="card-body">
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6">
+                <h1 class="mb-4 text-muted">25 </h1>
+              </div>
+              <div class="col-md-6">
+                <span> <i class="fa fa-bell"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <p>Exibir Inativos </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr>
+    <card-dados title='Detalhes' description='Usuarios Cadastrados'></card-dados>
+  </div>
 </div>
-<div class="col-md-4"></div>
-</div>
+
+
+
+<!-- <card-resumo title='Resumo' description='Total de  {{ users.length }} usuarios casdastrados '></card-resumo> -->

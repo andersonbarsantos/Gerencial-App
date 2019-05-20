@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { SidebarService } from './sidebar.service';
+import { SidebarService } from './shared/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -27,7 +27,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.menus = this.menu; 
-    console.log( this.menus);
+    //console.log( this.menus);
   }
 
   getSideBarState() {

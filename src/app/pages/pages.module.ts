@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { AppMaterialModule } from './../app-material/app-material.module';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
 import { RouterModule } from '@angular/router';
 import { SidebarModule } from '../@shared/components/sidebar/sidebar.module';
+import { AppMaterialModule } from '../@shared/app-material/app-material.module';
+import { AppBootstrapModule } from '../@shared/app-bootstrap/app-bootstrap.module';
+import { ComponentsModule } from './../@shared/components/components.module';
+
 
 @NgModule({
   declarations: [
     HomeComponent,
-    LoginComponent,     
+    LoginComponent   
+    
 
   ],
   imports: [
@@ -21,9 +25,10 @@ import { SidebarModule } from '../@shared/components/sidebar/sidebar.module';
     , RouterModule
     , ReactiveFormsModule
     , CommonModule    
-    , SidebarModule
+    , SidebarModule 
+    , AppBootstrapModule 
+    , ComponentsModule
 
-    
   ],
   exports: [
     HomeComponent,
