@@ -7,9 +7,9 @@ import { CoveragesDetailComponent } from './coverages-detail/coverages-detail.co
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Coverages-list', pathMatch: 'full' },
-  { path: 'Coverages-list', component: CoveragesListComponent },
-  { path: 'Coverages-detail', component: CoveragesDetailComponent },
+  { path: '', redirectTo: 'coverages-list', pathMatch: 'full' },
+  { path: 'coverages-list', component: CoveragesListComponent },
+  { path: 'coverages-detail', component: CoveragesDetailComponent },
 
 ];
 

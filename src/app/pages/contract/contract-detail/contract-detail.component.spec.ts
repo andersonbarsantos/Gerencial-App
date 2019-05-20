@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RamoListComponent } from './ramo-list.component';
+import { ContractDetailComponent } from './contract-detail.component';
 
-describe('RamoListComponent', () => {
-  let component: RamoListComponent;
-  let fixture: ComponentFixture<RamoListComponent>;
+describe('ContractDetailComponent', () => {
+  let component: ContractDetailComponent;
+  let fixture: ComponentFixture<ContractDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RamoListComponent ]
+      declarations: [ ContractDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RamoListComponent);
+    fixture = TestBed.createComponent(ContractDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

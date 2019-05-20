@@ -23,12 +23,12 @@ const appRoutes: Routes = [
       },
       {
         path: 'ramos',
-        loadChildren: './pages/ramo/ramo.module#RamoModule',
+        loadChildren: './pages/branch/branch.module#BranchModule',
         canActivate: [AuthGuard]
       },
       {
         path: 'seguradoras',
-        loadChildren: './pages/seguradora/seguradora.module#SeguradoraModule',
+        loadChildren: './pages/insurers/insurers.module#InsurersModule',
         canActivate: [AuthGuard]
       },
       {

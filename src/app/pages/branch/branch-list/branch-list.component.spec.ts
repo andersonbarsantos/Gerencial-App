@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeguradoraListComponent } from './seguradora-list.component';
+import { BranchListComponent } from './branch-list.component';
 
-describe('SeguradoraListComponent', () => {
-  let component: SeguradoraListComponent;
-  let fixture: ComponentFixture<SeguradoraListComponent>;
+describe('BranchListComponent', () => {
+  let component: BranchListComponent;
+  let fixture: ComponentFixture<BranchListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SeguradoraListComponent ]
+      declarations: [ BranchListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SeguradoraListComponent);
+    fixture = TestBed.createComponent(BranchListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
