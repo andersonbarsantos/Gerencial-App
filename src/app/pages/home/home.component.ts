@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
         },
         {
           title: 'Funcionario',
-          path: "/funcionario"
+          path: "/funcionarios"
         },
         {
           title: 'Ramos',
@@ -40,6 +40,10 @@ export class HomeComponent implements OnInit {
         {
           title: 'Seguradoras',
           path: '/seguradoras'
+        },
+        {
+          title: 'Coberturas',
+          path: '/coberturas'
         }
       ]
     },
@@ -71,7 +75,7 @@ export class HomeComponent implements OnInit {
       icon: 'fa fa-book',
       active: false,
       type: 'simple',
-      path: "/cliente",
+      path: "/client",
 
     },
     {

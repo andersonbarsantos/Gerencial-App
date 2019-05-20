@@ -21,17 +21,32 @@ const appRoutes: Routes = [
         loadChildren: './pages/client/client.module#ClientModule',
         canActivate: [AuthGuard]
       },
-      // {
-      //   path: 'funcionario',
-      //   loadChildren: './pages/funcionario/funcionario.module#FuncionarioModule',
-      //   canActivate: [AuthGuard]
-      // },
-
+      {
+        path: 'ramos',
+        loadChildren: './pages/ramo/ramo.module#RamoModule',
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'seguradoras',
+        loadChildren: './pages/seguradora/seguradora.module#SeguradoraModule',
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'funcionarios',
+        loadChildren: './pages/employee/employee.module#EmployeeModule',
+        canActivate: [AuthGuard]
+      },
       {
         path: 'user',
         loadChildren: './pages/user/user.module#UserModule',
         canActivate: [AuthGuard]
+      },
+      {
+        path: 'coberturas',
+        loadChildren: './pages/coverages/coverages.module#CoveragesModule',
+        canActivate: [AuthGuard]
       }
+      
 
     ],
   },
