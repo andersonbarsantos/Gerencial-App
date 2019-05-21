@@ -7,7 +7,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-
+import { setTheme } from 'ngx-bootstrap/utils';
 
 @NgModule({
   imports: [

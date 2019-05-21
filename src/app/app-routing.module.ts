@@ -45,6 +45,11 @@ const appRoutes: Routes = [
         path: 'coberturas',
         loadChildren: './pages/coverages/coverages.module#CoveragesModule',
         canActivate: [AuthGuard]
+      },
+      {
+        path: 'contratos',
+        loadChildren: './pages/contract/contract.module#ContractModule',
+        canActivate: [AuthGuard]
       }
       
 

@@ -1,3 +1,67 @@
-<p>
-  contract-list works!
-</p>
+<div class="row">
+    <div class="col-md-auto">
+      <fa name="users" fixed="True" size="2x"></fa>
+    </div>
+    <div class="col">
+      <h4 class="mb-3 text-muted">Contratos </h4>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8">
+  
+      <div class="card">
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="hidden">Id</th>
+                <th>Nome </th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of seguradoras">
+                <td class="hidden">{{item.id}}</td>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.cargo}}</td>
+                <td>
+  
+                  <button class="btn btn-danger" (click)="editUser(user)" style="margin-left: 20px;"> Editar</button>
+                  <!-- <button class="btn btn-danger" (click)="deleteUser(user)"> Remover</button> -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="col-md-4">
+  
+      <div class="card text-white bg-info  mb-4">
+        <div class="card-header"><i class="fas fa-exclamation-circle"></i> - Dados do Cliente</div>
+        <div class="card-body">
+ 
+  
+        </div>
+      </div>
+  
+      <hr>
+      <div class="card text-white bg-success  mb-4">
+          <div class="card-header"><i class="fas fa-exclamation-circle"></i> - Dados do Contrato</div>
+          <div class="card-body">
+   
+    
+          </div>
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- <card-resumo title='Resumo' description='Total de  {{ users.length }} usuarios casdastrados '></card-resumo> -->
